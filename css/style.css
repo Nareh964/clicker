@@ -16,8 +16,6 @@ body {
     width: 220px;
     height: 220px;
     border-radius: 50%;
-    background: url('../images/cookie.png') no-repeat center center;    
-    background-size: 72%;
     border: 6px solid rgba(60, 30, 10, 0.15);
     box-shadow: 0 8px 18px rgba(184, 115, 30, 0.35), inset 0 -6px 10px rgba(255,255,255,0.15);
     cursor: pointer;
@@ -146,4 +144,5 @@ button:disabled,
     border-radius: 8px;
     background: linear-gradient(90deg, rgba(255,255,255,0.35), rgba(255,245,235,0.3));
     border: 1px solid rgba(150,100,40,0.05);
+
 }
