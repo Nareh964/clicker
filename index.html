@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clicker-peli</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button id="cookiesButton" onclick="clickCookies()">Cookies</button>
+    <p id="cookiesAmount">You have 0 cookies</p>
+    
+    <p>per second: <span id="pointPerSecond">0</span></p>
+    <!--Buy-->
+    <div class="buy">
+        <div>
+            <button id="grandmaUpgrade" class="grandmaBuy" onclick="purchaseGrandma()">100 cookies for Grandma</button>
+        </div>
+
+        <div>
+            <button id="farmUpdgrade" class="farmBuy" onclick="purchaseFarm()">1250 cookies for Farm</button>
+        </div>
+
+        <div>
+            <button id="mineUpgrade" class="mineBuy" onclick="purchaseMine()">32 500 cookies for Mine</button>
+        </div>
+
+        <div>
+            <button id="factoryUpgrade" class="factoryBuy" onclick="purchaseFactory()">130 000 cookies for Factory</button>
+        </div>
+        
+        <div>
+            <button id="bankUpgrade" class="bankBuy" onclick="purchaseBank()">1 000 000 cookies for Bank</button>
+        </div>
+
+        <div>
+            <button id="templeUpgrade" class="templeBuy" onclick="purchaseTemple()">20 000 000 cookies for Temple</button>
+        </div>
+    </div>
+
+    <!--Sell-->
+    <div class="sell">
+        <div>
+            <button id="granmaSell" onclick="sellGrandma()">Grandma</button>
+            <br><span id="grandmaCount">0</span>
+        </div>
+
+        <div>
+            <button id="farmSell" onclick="sellFarm()">Farm</button>
+            <br><span id="farmCount">0</span>
+        </div>
+
+        <div>
+            <button id="mineSell" onclick="sellMine()">Mine</button>
+            <br><span id="mineCount">0</span>
+        </div>
+
+        <div>
+            <button id="factorySell" onclick="sellFactory()">Factory</button>
+            <br><span id="factoryCount">0</span>
+        </div>
+
+        <div>
+            <button id="sellBank" onclick="sellBank()">Bank</button>
+            <br><span id="bankCount">0</span>
+        </div>
+
+        <div>
+            <button id="sellTemple" onclick="sellTemple()">Temple</button>
+            <br><span id="templeCount">0</span>
+        </div>
+    </div>
+
+
+
+    <!--Effectiviness-->
+    <div class="effectivity">
+        <div>
+            <button id="grandmaEffectiviness" class="effectivity1" onclick="grandmaBoost()">500 cookies to upgrade Grandma effectiviness</button>
+        </div>
+
+        <div>
+            <button id="farmEffectiviness" class="effectivity2" onclick="farmBoost()">2000 cookies to upgrade Farm effectiviness</button>
+        </div>
+
+        <div>
+            <button id="mineEffectiviness" class="effectivity3" onclick="mineBoost()">40000 cookies to upgrade Mine effectiviness</button>   
+        </div>
+
+        <div>
+            <button id="factoryEffectiviness" class="effectivity4" onclick="factoryBoost()">175000 cookies to upgrade Factory effectiviness</button>
+        </div>
+        
+        <div>
+            <button id="bankEffectiviness" class="effectivity5" onclick="bankBoost()">1350000 cookies to upgrade Bank effectiviness</button>
+        </div>
+
+        <div>
+            <button id="templeEffectiviness" class="effectivity6" onclick="templeBoost()">25000000 cookies to upgrade Temple effectiviness</button>
+        </div>
+    </div>
+    
+    <script src="js/click.js"></script>
+</body>
+</html>
