@@ -1,0 +1,149 @@
+body {
+    font-family: 'Times New Roman', serif;
+    background: radial-gradient(circle at 10% 20%, #fff7e6 0%, #fff0d1 20%, #f7e0b8 40%, #f0c27b 60%, #c87f2f 100%);
+    margin: 0;
+    padding: 24px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    color: #3b2e2a;
+}
+
+/* Main cookie button (large, centered, tactile) */
+#cookiesButton {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: url('../images/cookie.png') no-repeat center center;    
+    background-size: 72%;
+    border: 6px solid rgba(60, 30, 10, 0.15);
+    box-shadow: 0 8px 18px rgba(184, 115, 30, 0.35), inset 0 -6px 10px rgba(255,255,255,0.15);
+    cursor: pointer;
+    transition: transform 0.08s ease, box-shadow 0.08s ease;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    color: #4b2d00;
+}
+#cookiesButton:active { transform: scale(0.96); box-shadow: 0 4px 10px rgba(120,60,20,0.25); }
+
+/* Header text and counters */
+#cookiesAmount {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 6px 0 0;
+    text-align: center;
+    color: #3b2a1f;
+}
+
+p { margin: 6px 0; }
+
+#pointPerSecond {
+    font-weight: 700;
+    color: #6b3b00;
+}
+
+/* Layout for shop, sell and effectivity sections */
+.buy, .sell, .effectivity {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+    width: 100%;
+    max-width: 1100px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.8), rgba(255,250,240,0.6));
+    padding: 14px;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(80,40,10,0.08);
+}
+
+/* Individual entries */
+.buy > div, .sell > div, .effectivity > div {
+    background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,245,235,0.9));
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    border: 1px solid rgba(150,100,40,0.08);
+}
+
+/* Buttons inside containers */
+.buy button, .effectivity button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background: linear-gradient(180deg,#ffcf6b,#e89a2f);
+    color: #3b2a1f;
+    font-weight: 700;
+    box-shadow: 0 6px 10px rgba(200,120,40,0.12);
+    transition: transform .08s ease, filter .12s ease;
+}
+.buy button:hover, .effectivity button:hover { filter: brightness(1.03); transform: translateY(-2px); }
+
+.sell button {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    background: linear-gradient(180deg,#ffdede,#f16b5b);
+    color: #5a1e14;
+    font-weight: 700;
+    border: 1px solid rgba(120,30,20,0.06);
+    box-shadow: 0 5px 8px rgba(241,107,91,0.12);
+    cursor: pointer;
+}
+.sell button:hover { transform: translateY(-2px); }
+
+/* Disabled state */
+button:disabled,
+.buy button[disabled],
+.sell button[disabled],
+.effectivity button[disabled] {
+    opacity: 0.45;
+    cursor: not-allowed;
+    transform: none;
+    filter: grayscale(20%);
+    box-shadow: none;
+}
+
+/* Small labels and counts */
+.buy > div br,
+.sell > div br,
+.effectivity > div br { display: none; }
+
+.buy > div span, .sell > div span {
+    font-size: 0.95rem;
+    color: #5a3b2a;
+}
+
+/* Visual states for owned/unavailable */
+.ownned, .owned {
+    background: linear-gradient(180deg,#e9f8ed,#d9f0de);
+    border: 1px solid rgba(50,120,60,0.09);
+}
+.unavailable { opacity: 0.55; pointer-events: none; }
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+    #cookiesButton { width: 160px; height: 160px; }
+    .buy, .sell, .effectivity { grid-template-columns: 1fr; padding: 10px; }
+}
+
+/* Small decorative footer-like strip */
+.footer-strip {
+    width: 100%;
+    max-width: 1100px;
+    text-align: center;
+    color: rgba(60,30,10,0.7);
+    font-size: 0.85rem;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: linear-gradient(90deg, rgba(255,255,255,0.35), rgba(255,245,235,0.3));
+    border: 1px solid rgba(150,100,40,0.05);
+}
